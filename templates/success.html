@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Успех | С 8 Марта 💖</title>
+    <style>
+        :root {
+            --blue: #1e3a8a;     --navy: #3b82f6;  --gold: #facc15;  --royal: #2563eb;
+            --white: #fff;       --shadow: 0 25px 50px rgba(59,130,246,0.4);
+            --glow: 0 0 40px rgba(59,130,246,0.9);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(-45deg, var(--blue), var(--navy), var(--royal), var(--gold));
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            letter-spacing: -0.025em;
+            color: var(--white);
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0%,100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .bg-animation {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 1;
+        }
+        .heart {
+            position: absolute; font-size: 14px;
+            color: var(--navy);
+            opacity: 0.6;
+            animation: floatHeart 8s linear infinite;
+        }
+        @keyframes floatHeart {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.6); opacity: 0.6; }
+            100% { transform: translateY(-150px) rotate(360deg) scale(1.0); opacity: 0; }
+        }
+
+        .content {
+            position: relative; z-index: 5;
+            padding: 60px 15px 140px;
+            max-width: 950px; margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* ✅ ТОЧНО КАК В КРАСОТЕ 💎 */
+        .page-title {
+            font-size: clamp(4.2em, 10vw, 6.4em);
+            font-weight: 800;
+            color: var(--white);
+            text-shadow:
+                0 8px 25px rgba(0,0,0,0.7),
+                0 0 30px var(--gold),
+                0 0 50px rgba(0,0,0,0.5);
+            margin: 25px 0 40px;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+            line-height: 1.1;
+            max-width: 90%;
+            word-break: break-word;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 8px 25px rgba(0,0,0,0.7), 0 0 30px var(--blue); }
+            to { text-shadow: 0 8px 25px rgba(0,0,0,0.7), 0 0 40px var(--gold), 0 0 60px var(--navy); }
+        }
+
+        .wish-text {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            font-size: clamp(1.4em, 5vw, 2.2em);
+            line-height: 1.25;
+            color: #ffffff;
+            text-shadow: 
+                0 3px 12px rgba(0,0,0,0.8),
+                0 1px 2px rgba(0,0,0,0.3);
+            max-width: 95%;
+            width: 100%;
+            margin: 0 auto 40px;
+            padding: 35px 20px; 
+            min-height: 300px;
+            background: rgba(20, 15, 55, 0.92);
+            border-radius: 28px;
+            border: 3px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(255,255,255,0.25);
+            box-sizing: border-box;
+        }
+
+        .wish-line {
+            display: block;
+            margin: 0 !important;
+            opacity: 0.98;
+            flex: 1;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button {
+            position: fixed;
+            left: 50%;
+            bottom: 25px;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 14px 28px;
+            font-size: clamp(1.1em, 4.5vw, 1.3em);
+            font-weight: 600;
+            color: var(--white);
+            background: linear-gradient(135deg, #dbeafe, #3b82f6);
+            border: 2px solid rgba(255,255,255,0.85);
+            border-radius: 28px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0.96;
+            min-width: 200px;
+            touch-action: manipulation;
+        }
+
+        .cta-button:hover,
+        .cta-button:active {
+            transform: translateX(-50%) translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.55);
+            background: linear-gradient(135deg, #bfdbfe, #1d4ed8);
+            border-color: rgba(255,255,255,1);
+            opacity: 1;
+        }
+
+        .cta-button:active {
+            transform: translateX(-50%) translateY(-1px) scale(0.98);
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 50px 12px 160px;
+            }
+            
+            /* ✅ ТОЧНО КАК В КРАСОТЕ */
+            .page-title {
+                margin: 20px 0 30px;
+                font-size: clamp(4.8em, 12vw, 6.6em);
+                line-height: 1.15;
+            }
+            
+            .wish-text {
+                padding: 28px 18px;
+                min-height: 280px;
+                margin-bottom: 30px;
+                border-radius: 24px;
+                font-size: clamp(1.35em, 5.5vw, 2em);
+                max-width: 100%;
+            }
+            
+            .cta-button {
+                left: auto !important;
+                right: 16px !important;
+                bottom: 25px !important;
+                transform: none !important;
+                padding: 16px 24px;
+                min-height: 52px;
+                font-size: 1.1em;
+                border-radius: 24px;
+            }
+            
+            .heart {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .content {
+                padding: 45px 10px 170px;
+            }
+
+            /* ✅ ТОЧНО КАК В КРАСОТЕ */
+            .page-title {
+                font-size: clamp(4.6em, 13vw, 6.2em);
+                margin: 18px 0 25px;
+            }
+
+            .wish-text {
+                padding: 25px 16px;
+                min-height: 260px;
+                font-size: clamp(1.25em, 6vw, 1.85em);
+                border-radius: 20px;
+            }
+
+            .cta-button {
+                right: 14px !important;
+                bottom: 22px !important;
+                padding: 15px 22px;
+                min-height: 50px;
+                font-size: 1.05em;
+                border-radius: 22px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .content {
+                padding: 70px 20px 140px;
+            }
+            
+            .wish-text {
+                padding: 32px 22px;
+                min-height: 290px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .wish-text {
+                background: rgba(10, 8, 45, 0.95);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <div class="content">
+        <h1 class="page-title">🏆 Успех</h1>
+
+        <p class="wish-text">
+            <span class="wish-line">🏆 Пусть успех станет</span>
+            <span class="wish-line">вашим верным спутником</span>
+            <span class="wish-line">в каждом начинании!</span>
+
+            <span class="wish-line">🏆 Желаю уверенных побед,</span>
+            <span class="wish-line">смелых решений и</span>
+            <span class="wish-line">достижения всех целей.</span>
+
+            <span class="wish-line">С 8 Марта! 💖✨</span>
+        </p>
+    </div>
+
+    <a href="/" class="cta-button">К поздравлению</a>
+
+    <script>
+        function createHearts() {
+            const bg = document.getElementById('bgAnimation');
+            const count = window.innerWidth < 768 ? 15 : 25;
+            for(let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = ['🏆','⭐','✨','💎','🚀'][Math.floor(Math.random()*5)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = (Math.random()*4 + 5) + 's';
+                    bg.appendChild(heart);
+                    setTimeout(() => { heart.remove(); }, 9000);
+                }, i * 400);
+            }
+        }
+        createHearts();
+        setInterval(createHearts, window.innerWidth < 768 ? 6000 : 5000);
+    </script>
+</body>
+</html>
