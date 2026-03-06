@@ -44,5 +44,5 @@ def warmth():
 def inspiration():
     return render_template('inspiration.html')  # Страница побед
 
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8800, ssl_context='adhoc', debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
